@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px); 
+    gap: 10px; 
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db; 
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.box:hover {
+    background-color: #2ecc71; 
+    transform: scale(1.2); 
+}
