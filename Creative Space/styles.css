@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #F1E0C6, #F5D2A4, #F9D0A1);
+    background-size: 300% 300%;
+    animation: gradient 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .header-text {
+    font-size: 8rem; 
+    font-weight: bold;
+    color: #5C4033; 
+    z-index: 1;
+    margin-bottom: 50px; 
+  }
+  
+  .subtitle {
+    font-size: 3rem; 
+    color: #A88D7D; 
+    font-weight: normal;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    grid-gap: 10px;
+    z-index: 2; 
+    position: relative;
+  }
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: #D8C2A7; 
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    border-radius: 8px;
+  }
+  
+  .box1 { background-color: #E1D1B1; }
+  .box2 { background-color: #D8C2A7; }
+  .box3 { background-color: #C1A57B; }
+  .box4 { background-color: #D5B89E; }
+  .box5 { background-color: #E3D0A8; }
+  .box6 { background-color: #BFA38A; }
+  .box7 { background-color: #D8C4A5; }
+  .box8 { background-color: #C8A88C; }
+  .box9 { background-color: #D4B98D; }
+  .box10 { background-color: #E1D4B2; }
+  .box11 { background-color: #C6A880; }
+  .box12 { background-color: #D2C29D; }
+  .box13 { background-color: #C8A77B; }
+  .box14 { background-color: #E0CBA1; }
+  .box15 { background-color: #D1B68C; }
+  .box16 { background-color: #D9C3A0; }
+  .box17 { background-color: #BFA782; }
+  .box18 { background-color: #D8C79D; }
+  .box19 { background-color: #E2D6A1; }
+  .box20 { background-color: #D4BC96; }
+  
+  .box:hover {
+    opacity: 0;
+    background-color: transparent;
+    transform: scale(1.1); 
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2); 
+  }
+  .box:hover::after {
+    content: attr(data-text); 
+    color: #5C4033; 
+    font-size: 1.5rem; 
+    font-weight: bold;
+    font-family: 'Cursive', sans-serif; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 3;
+  }
+  
